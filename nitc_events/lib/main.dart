@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './widgets/events_view.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -24,15 +26,16 @@ class MyHomePage extends StatelessWidget {
         title: Text('NITC Events'),
         actions: <Widget>[],
       ),
-      body: Container(),
+      body: EventsView(),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
             DrawerHeader(
-              child: Text('Drawer Head'),
-              decoration: BoxDecoration(color: Theme.of(context).accentColor,)
-            ),
+                child: Text('Drawer Head'),
+                decoration: BoxDecoration(
+                  color: Theme.of(context).accentColor,
+                )),
             ListTile(
               title: Text('item 1'),
             )
