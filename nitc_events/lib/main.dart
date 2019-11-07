@@ -39,7 +39,20 @@ class MyHomePage extends StatelessWidget {
                 )),
             ListTile(
               title: Text('Upcomming Events'),
-            )
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => EventsView(),
+                  ),
+                );
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('Archived Events'),
+              onTap: () {Navigator.pop(context);},
+            ),
           ],
         ),
       ),

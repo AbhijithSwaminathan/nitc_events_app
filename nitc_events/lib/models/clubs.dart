@@ -10,4 +10,6 @@ class Clubs {
     @required this.clubName,
     @required this.clubImage,
   });
+
+  //Clubs nss = Clubs(clubName: "NSS", clubImage: "here");
 }

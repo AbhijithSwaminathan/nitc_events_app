@@ -43,8 +43,25 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-   - assets/images/places/nitc.jpeg
+   - assets/images/clubs/adventure.jpg
+   - assets/images/clubs/aerounwired.jpg
+   - assets/images/clubs/av.png
+   - assets/images/clubs/clubmath.jpg
+   - assets/images/clubs/dnd.jpg
+   - assets/images/clubs/enquire.jpg
+   - assets/images/clubs/hvg.png
+   - assets/images/clubs/ica.jpg
+   - assets/images/clubs/ieee.jpg
+   - assets/images/clubs/ipf.jpg
+   - assets/images/clubs/iste.jpg
+   - assets/images/clubs/lnd.jpg
+   - assets/images/clubs/musicclub.jpg
    - assets/images/clubs/nss.jpg
+   - assets/images/clubs/rig.png
+   - assets/images/clubs/spicemacay.jpg
+   - assets/images/clubs/teamunwired.jpg
+   
+   - assets/images/places/nitc.jpeg
    - assets/images/back.jpg
   #  - images/a_dot_ham.jpeg
 

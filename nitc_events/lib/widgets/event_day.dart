@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import './event_card.dart';
+import '../models/events.dart';
+import '../models/events_list.dart';
 
 class EventDay extends StatelessWidget {
   final DateTime date;
 
   EventDay({this.date});
 
+  final List<Events> demoEvents = EventsList().demo();
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +39,10 @@ class EventDay extends StatelessWidget {
         SizedBox(
           height: 10,
         ),
-        EventCard(date: date),
+        EventCard(
+          date: date,
+          demoEvents: demoEvents,
+        ),
       ],
     );
   }
