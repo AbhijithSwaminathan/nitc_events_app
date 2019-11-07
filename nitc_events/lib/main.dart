@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'NITC EVENTS',
       theme: ThemeData(
-        primarySwatch: Colors.cyan,
+        primarySwatch: Colors.deepPurple,
+        accentColor: Colors.deepPurple[300],
       ),
       home: MyHomePage(),
     );
@@ -32,12 +33,12 @@ class MyHomePage extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: <Widget>[
             DrawerHeader(
-                child: Text('Drawer Head'),
+                child: Text('NITC Events Beta v0.0.1'),
                 decoration: BoxDecoration(
                   color: Theme.of(context).accentColor,
                 )),
             ListTile(
-              title: Text('item 1'),
+              title: Text('Upcomming Events'),
             )
           ],
         ),

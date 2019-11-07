@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+
+import './event_card.dart';
 
 class EventDay extends StatelessWidget {
+  final DateTime date;
+
+  EventDay({this.date});
+
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -13,12 +21,13 @@ class EventDay extends StatelessWidget {
           child: Row(
             children: <Widget>[
               SizedBox(
-                width: 50,
+                width: 35,
               ),
               Text(
-                'Date here',
+                DateFormat().add_yMMMMEEEEd().format(date),
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
+                  fontSize: 16,
                 ),
               ),
             ],
@@ -27,66 +36,7 @@ class EventDay extends StatelessWidget {
         SizedBox(
           height: 10,
         ),
-        Container(
-          height: 200,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(100),
-          ),
-          child: Card(
-            elevation: 5,
-            margin: EdgeInsets.all(10),
-            child: Row(
-              children: <Widget>[
-                Expanded(
-                  flex: 2,
-                  child: Column(
-                    children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: CircleAvatar(
-                          radius: 30,
-                          backgroundColor: Colors.blue,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(4.0),
-                        child: Text(
-                          'Club Name',
-                          style: TextStyle(
-                            fontSize: 15,
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          'Event Name',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(4.0),
-                        child: Text('Time'),
-                      ),
-                    ],
-                  ),
-                ),
-                Expanded(
-                  flex: 3,
-                  child: Container(
-                    child: Image.asset(
-                      'assets/images/nitc.jpeg',
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        )
+        EventCard(date: date),
       ],
     );
   }
